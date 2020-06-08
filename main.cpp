@@ -24,7 +24,6 @@ class populacja
 	vector <osoba> tablica;
 	fstream plik;
 	string napis;
-	char znak;
 
 public:
 	populacja() {
@@ -60,7 +59,7 @@ public:
 
 				cout << " {\n";
 				cout << "  " << x << "title" << x << ": " << x << tablica[i].imie << " " << tablica[i].nazwisko << x << ",\n";
-				cout << "  " << x << "subtitle" << x << ": " << tablica[i].wiek << "\n";
+				cout << "  " << x << "subtitle" << x << ": " << x << tablica[i].wiek << x << "\n";
 				cout << " }";
 				if (i + 1 < tablica.size())
 					cout << ",";
@@ -75,8 +74,8 @@ public:
 
 int main()
 {
-	//cout<<"Content-Type: application/json;charset=UTF-8;Access-Control-Allow-Origin: *" << (char)13 << (char)10;
-	cout << "Content-Type:application/json;charset=UTF-8" << (char)13 << (char)10;
+	cout<<"Content-Type: application/json;charset=UTF-8;Access-Control-Allow-Origin: *" << (char)13 << (char)10;
+	//cout << "Content-Type:application/json;charset=UTF-8" << (char)13 << (char)10;
 	populacja P;
 	P.sortuj();
 	P.wypiszJSON();
